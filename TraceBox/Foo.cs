@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace TraceBox
 {
@@ -6,8 +7,14 @@ namespace TraceBox
     {
         public static void TracedMethod()
         {
-            Trace.WriteLine("Start", "Info");
-            Trace.WriteLine("End", "Info");
+            Tracer.LogInfo("Start");
+            Tracer.LogInfo("End");
+        }
+
+        public static void ExceptionMethod()
+        {
+            Tracer.LogInfo("Start");
+            throw new InvalidOperationException("fuu");
         }
     }
 }

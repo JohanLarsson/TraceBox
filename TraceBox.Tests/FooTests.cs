@@ -2,7 +2,7 @@
 {
     using Xunit;
 
-    public class UnitTest1
+    public class FooTests
     {
         [Fact]
         public void CallTracedMethod()
